@@ -2,6 +2,7 @@
 using APIXUnitTest.Data;
 using APIXUnitTest.Model;
 using APIXUnitTest.VM;
+using Microsoft.EntityFrameworkCore;
 
 namespace APIXUnitTest.Services
 {
@@ -14,11 +15,11 @@ namespace APIXUnitTest.Services
         }
         public IEnumerable<Country> GetCountryList()
         {
-            return _dbContext.Countries.ToList();
+            return _dbContext.Countries.Include(i=>i.Continent).ToList();
         }
         public Country GetCountryById(int id)
         {
-            return _dbContext.Countries.Where(x => x.Id == id).FirstOrDefault();
+            return _dbContext.Countries.Where(x => x.CountryId == id).FirstOrDefault();
         }
         public Response AddCountry(Country country)
         {
@@ -26,9 +27,9 @@ namespace APIXUnitTest.Services
             try
             {
                 var countryo = new Country();
-                countryo.Id = country.Id;
+                countryo.CountryId = country.CountryId;
                 countryo.Description = country.Description;
-                countryo.Name = country.Name;
+                countryo.CountryName = country.CountryName;
                 _dbContext.Add(countryo);
                 res.Message = "Ok";
                 return res;
@@ -44,10 +45,10 @@ namespace APIXUnitTest.Services
             var res = new Response();
             try
             {
-                var item = _dbContext.Countries.Where(i => i.Id == country.Id).FirstOrDefault();
+                var item = _dbContext.Countries.Where(i => i.CountryId == country.CountryId).FirstOrDefault();
                 var countryo = new Country();
                 countryo.Description = country.Description;
-                countryo.Name = country.Name;
+                countryo.CountryName = country.CountryName;
                 res.Message = "Ok";
                 return res;
             }
@@ -59,10 +60,14 @@ namespace APIXUnitTest.Services
         }
         public bool DeleteCountry(int Id)
         {
-            var filteredData = _dbContext.Countries.Where(x => x.Id == Id).FirstOrDefault();
+            var filteredData = _dbContext.Countries.Where(x => x.CountryId == Id).FirstOrDefault();
             var result = _dbContext.Remove(filteredData);
             _dbContext.SaveChanges();
             return result != null ? true : false;
+        }
+        public IEnumerable<Continent> GetContinentList()
+        {
+            return _dbContext.Continents.ToList();
         }
     }
 }

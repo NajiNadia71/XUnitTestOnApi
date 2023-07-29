@@ -42,8 +42,8 @@ namespace XUnitTestProject
             var countryResult = countryController.GetCountryById(2);
             //assert
             Assert.NotNull(countryResult);
-            Assert.Equal(countryList[1].Id, countryResult.Id);
-            Assert.True(countryList[1].Id == countryResult.Id);
+            Assert.Equal(countryList[1].CountryId, countryResult.CountryId);
+            Assert.True(countryList[1].CountryId == countryResult.CountryId);
         }
         [Theory]
         [InlineData("Italy")]
@@ -56,7 +56,7 @@ namespace XUnitTestProject
             var countryController = new GeographyController(GeographyService.Object);
             //act
             var countryResult = countryController.CountryList();
-            var expectedCountryName = countryResult.ToList()[0].Name;
+            var expectedCountryName = countryResult.ToList()[0].CountryName;
             //assert
             Assert.Equal(countryName, expectedCountryName);
         }
@@ -85,21 +85,21 @@ namespace XUnitTestProject
         {
             new Country
             {
-                Id = 1,
-                Name = "Italy",
+                CountryId = 1,
+                CountryName = "Italy",
                 Description = "Description Italy",
               
             },
              new Country
             {
-               Id = 2,
-                Name = "France",
+               CountryId = 2,
+                CountryName = "France",
                 Description = "Description France",
             },
              new Country
             {
-                  Id = 3,
-                Name = "Germany",
+                  CountryId = 3,
+                CountryName = "Germany",
                 Description = "Description Germany",
             },
         };

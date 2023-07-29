@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ULwGp/zGGFr/gzj2hcQ8fys/1YW8nNwqjx9baHIb1SVmOwmQM7gIsxv9NfDMewAOoIyHmgrgb2XQT7QWhHZA+Q==",
+  "dgSpecHash": "MGWnUHtz+qWFxysDsSMCO1GlmRlpA7dhxfc/Lwpf6IjhpjDNU+9/p8fi2NM75qfqrzMPtxlYIShf26/HRm06gg==",
   "success": true,
-  "projectFilePath": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\XUnitTestProject\\XUnitTestProject.csproj",
+  "projectFilePath": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\XUnitTestProject\\XUnitTestProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nadia\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\nadia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\castle.core\\5.0.0\\castle.core.5.0.0.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",
-    "C:\\Users\\nadia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\nadia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",

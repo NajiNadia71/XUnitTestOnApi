@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "uhY0xGyTz/bPlAlnqAdDLbCSW3n09nIgci40KArhY6p+0XwB2XSaSxgSkkq5S75AxPUR0z4pGZGFXYNJIm4FGA==",
+  "dgSpecHash": "gA7/CQGw/k9K/I6zBOhZaxJl9ScMtPjVCNG+QCk5454Iv87C8FHVu1sZUv/XL5bswR4R5Th7PiQkiC1x2r3eOA==",
   "success": true,
-  "projectFilePath": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\APIXUnitTest\\APIXUnitTest.csproj",
+  "projectFilePath": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\APIXUnitTest\\APIXUnitTest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nadia\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\nadia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\nadia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\nadia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\nadia\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",

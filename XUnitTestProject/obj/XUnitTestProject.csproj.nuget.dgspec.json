@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Nadia\\Projects\\core\\APIXUnitTest\\XUnitTestProject\\XUnitTestProject.csproj": {}
+    "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\XUnitTestProject\\XUnitTestProject.csproj": {}
   },
   "projects": {
-    "C:\\Nadia\\Projects\\core\\APIXUnitTest\\APIXUnitTest\\APIXUnitTest.csproj": {
+    "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\APIXUnitTest\\APIXUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\APIXUnitTest\\APIXUnitTest.csproj",
+        "projectUniqueName": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\APIXUnitTest\\APIXUnitTest.csproj",
         "projectName": "APIXUnitTest",
-        "projectPath": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\APIXUnitTest\\APIXUnitTest.csproj",
+        "projectPath": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\APIXUnitTest\\APIXUnitTest.csproj",
         "packagesPath": "C:\\Users\\nadia\\.nuget\\packages\\",
-        "outputPath": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\APIXUnitTest\\obj\\",
+        "outputPath": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\APIXUnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nadia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.7, )"
@@ -89,14 +97,14 @@
         }
       }
     },
-    "C:\\Nadia\\Projects\\core\\APIXUnitTest\\XUnitTestProject\\XUnitTestProject.csproj": {
+    "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\XUnitTestProject\\XUnitTestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\XUnitTestProject\\XUnitTestProject.csproj",
+        "projectUniqueName": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\XUnitTestProject\\XUnitTestProject.csproj",
         "projectName": "XUnitTestProject",
-        "projectPath": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\XUnitTestProject\\XUnitTestProject.csproj",
+        "projectPath": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\XUnitTestProject\\XUnitTestProject.csproj",
         "packagesPath": "C:\\Users\\nadia\\.nuget\\packages\\",
-        "outputPath": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\XUnitTestProject\\obj\\",
+        "outputPath": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\XUnitTestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nadia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -113,8 +121,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Nadia\\Projects\\core\\APIXUnitTest\\APIXUnitTest\\APIXUnitTest.csproj": {
-                "projectPath": "C:\\Nadia\\Projects\\core\\APIXUnitTest\\APIXUnitTest\\APIXUnitTest.csproj"
+              "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\APIXUnitTest\\APIXUnitTest.csproj": {
+                "projectPath": "C:\\Nadia\\Projects\\core\\UnitTest\\XUnitTestOnApi\\APIXUnitTest\\APIXUnitTest.csproj"
               }
             }
           }

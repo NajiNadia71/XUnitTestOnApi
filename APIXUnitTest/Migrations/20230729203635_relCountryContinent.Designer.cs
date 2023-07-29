@@ -3,6 +3,7 @@ using APIXUnitTest.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIXUnitTest.Migrations
 {
     [DbContext(typeof(DbContextClass))]
-    partial class DbContextClassModelSnapshot : ModelSnapshot
+    [Migration("20230729203635_relCountryContinent")]
+    partial class relCountryContinent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,17 +25,13 @@ namespace APIXUnitTest.Migrations
 
             modelBuilder.Entity("APIXUnitTest.Model.Continent", b =>
                 {
-                    b.Property<int>("ContinentId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContinentId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ContinentInformation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ContinentName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -44,24 +42,28 @@ namespace APIXUnitTest.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Population")
                         .HasColumnType("int");
 
                     b.Property<int>("SurfaceArea")
                         .HasColumnType("int");
 
-                    b.HasKey("ContinentId");
+                    b.HasKey("Id");
 
                     b.ToTable("Continents");
                 });
 
             modelBuilder.Entity("APIXUnitTest.Model.Country", b =>
                 {
-                    b.Property<int>("CountryId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CountryId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Capital")
                         .IsRequired()
@@ -75,11 +77,11 @@ namespace APIXUnitTest.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CountryName")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -89,7 +91,7 @@ namespace APIXUnitTest.Migrations
                     b.Property<int>("SurfaceArea")
                         .HasColumnType("int");
 
-                    b.HasKey("CountryId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ContinentId");
 
@@ -99,7 +101,7 @@ namespace APIXUnitTest.Migrations
             modelBuilder.Entity("APIXUnitTest.Model.Country", b =>
                 {
                     b.HasOne("APIXUnitTest.Model.Continent", "Continent")
-                        .WithMany("Countrys")
+                        .WithMany("UserGroups")
                         .HasForeignKey("ContinentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -109,7 +111,7 @@ namespace APIXUnitTest.Migrations
 
             modelBuilder.Entity("APIXUnitTest.Model.Continent", b =>
                 {
-                    b.Navigation("Countrys");
+                    b.Navigation("UserGroups");
                 });
 #pragma warning restore 612, 618
         }

@@ -10,5 +10,6 @@ namespace APIXUnitTest.Services
         public Response AddCountry (Country country);
         public Response UpdateCountry(Country country);
         public bool DeleteCountry(int Id);
+        public IEnumerable<Continent> GetContinentList();
     }
 }
