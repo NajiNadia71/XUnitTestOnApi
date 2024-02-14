@@ -2,7 +2,9 @@
 {
     public class CountryDto
     {
-        public CountryDto() { }
+        public CountryDto() {
+        Continent = new ContinentDto();
+        }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Capital { get; set; }

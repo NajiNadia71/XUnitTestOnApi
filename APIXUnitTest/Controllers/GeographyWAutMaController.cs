@@ -34,10 +34,11 @@ namespace APIXUnitTest.Controllers
             return y;
         }
         [HttpPost("FromCountryDtoToCountryEntity")]
-        public Country PostFromCountryDtoToCountryEntity([FromBody] CountryDto countryDto)
+        public VM.Response PostFromCountryDtoToCountryEntity([FromBody] CountryDto countryDto)
         {
-
-            return Mapper.Map<Country>(countryDto);
+           var  country= Mapper.Map<Country>(countryDto);
+            var x = geographyService.AddCountry(country);
+            return x; 
         }
         [HttpGet("FromCountryEntityToCountryDto")]
         public IEnumerable<CountryDto> PostFromCountryEntityToCountryDto()

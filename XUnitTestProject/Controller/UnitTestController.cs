@@ -21,7 +21,7 @@ namespace XUnitTestProject
             var countryList = GetCountrysData();
             GeographyService.Setup(x => x.GetCountryList())
                 .Returns(countryList);
-            var countryController = new GeographyController(GeographyService.Object);
+            var countryController = new GeographyController(GeographyService.Object,null);
             //act
             var countryResult = countryController.CountryList();
             //assert
@@ -37,7 +37,7 @@ namespace XUnitTestProject
             var countryList = GetCountrysData();
             GeographyService.Setup(x => x.GetCountryById(2))
                 .Returns(countryList[1]);
-            var countryController = new GeographyController(GeographyService.Object);
+            var countryController = new GeographyController(GeographyService.Object,null);
             //act
             var countryResult = countryController.GetCountryById(2);
             //assert
@@ -53,7 +53,7 @@ namespace XUnitTestProject
             var countryList = GetCountrysData();
             GeographyService.Setup(x => x.GetCountryList())
                 .Returns(countryList);
-            var countryController = new GeographyController(GeographyService.Object);
+            var countryController = new GeographyController(GeographyService.Object,null);
             //act
             var countryResult = countryController.CountryList();
             var expectedCountryName = countryResult.ToList()[0].CountryName;
@@ -70,7 +70,7 @@ namespace XUnitTestProject
             res.Message = "Ok";
             GeographyService.Setup(x => x.AddCountry(countryList[2]))
                 .Returns(res);
-            var countryController = new GeographyController(GeographyService.Object);
+            var countryController = new GeographyController(GeographyService.Object,null);
             //act
             var countryResult = countryController.AddCountry(countryList[2]);
             //assert

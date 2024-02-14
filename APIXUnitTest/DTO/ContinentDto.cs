@@ -7,13 +7,13 @@ namespace APIXUnitTest.DTO
     {
         public ContinentDto()
         {
-           Countrys = new HashSet<CountryDto>();
+          
         }
-
-        public string Description { get; set; }
-        public int Population { get; set; }
+        public int ContinentId { get; set; }
+       // public string Description { get; set; }
+       // public int Population { get; set; }
         public string Name { get; set; } = null!;
-        public virtual ICollection<CountryDto> Countrys { get; set; } = null!;
+     //   public virtual ICollection<CountryDto> Countrys { get; set; } = null!;
 
     }
 }

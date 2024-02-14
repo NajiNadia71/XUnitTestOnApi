@@ -30,7 +30,13 @@ namespace APIXUnitTest.Services
                 countryo.CountryId = country.CountryId;
                 countryo.Description = country.Description;
                 countryo.CountryName = country.CountryName;
-                _dbContext.Add(countryo);
+                countryo.ContinentId = country.Continent.ContinentId;
+                countryo.Population = country.Population;
+                countryo.SurfaceArea = country.SurfaceArea;
+                countryo.Capital = country.Capital;
+                countryo.CountryInformation = "Some Info Added by someOne";
+                _dbContext.Countries.Add(countryo);
+                 _dbContext.SaveChanges();
                 res.Message = "Ok";
                 return res;
             }
@@ -67,7 +73,7 @@ namespace APIXUnitTest.Services
         }
         public IEnumerable<Continent> GetContinentList()
         {
-            return _dbContext.Continents.ToList();
+            return _dbContext.Continents.Include(i => i.Countrys).ToList();
         }
     }
 }
