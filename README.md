@@ -2,7 +2,7 @@
 create Unit Test On Api .netcore 6 with Xunit and moq
 //
 //Link Of the APIs:
-https://localhost:7284/swagger/index.html
+https://XVY.html
 
  1. Check API CRUD Only For Create and Get 
  Controller: GeographyWAutMa and Geography
