@@ -3,7 +3,8 @@ create Unit Test On Api .netcore 6 with Xunit and moq
 //
 //Link Of the APIs:
 https://XVY.html
-
+[View Swagger Documentation](./docs/swagger.json)
+(./XUnitTestProject/UnitTest1.cs)
  1. Check API CRUD Only For Create and Get 
  Controller: GeographyWAutMa and Geography
  Using 2 approaches to use DTO 
